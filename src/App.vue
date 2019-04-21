@@ -1,17 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <div class="row">
+
+      <!-- Header -->
+      <div class="col-12">
+        <h1>Header</h1>
+      </div>
+
+      <!-- Map and Search -->
+      <div class="col-12 col-lg-6">
+        <MapSearch/>
+      </div>
+
+      <!-- Search Results -->
+      <div class="col-12 col-lg-6">
+        <SearchResults/>
+      </div>
+
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MapSearch from '@/components/MapSearch.vue';
+import SearchResults from '@/components/SearchResults.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MapSearch,
+    SearchResults
   }
 }
 </script>
